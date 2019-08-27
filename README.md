@@ -1,2 +1,7 @@
-# sign-in-canada.github.io
-Public documentation for Sign In Canada
+# Sign In Canada
+
+Sign In Canada will ensure continuity of service for current clients of online service and advance the authentication solution to support the digital service strategy and digital identity initiatives (OneGC vision).
+
+The new service will establish a common acceptance platform which will accept the traditional credentials in use today (Banks and GCKey), and will enable the acceptance of trusted digital identities from provinces and territories (MyAlberta) which comply with the Pan-Canadian Trust Framework. This will position the GC to take advantage of future technologies (e.g. digital wallets, mobileConnect, etc.) and service evolution with the ability to adapt existing network architectures, endpoints and protocols, as new technology becomes available.
+
+The Acceptance Platform will be instrumental to achieving the outcome of bringing the current and separately managed chooser function and credential services under one management scheme. The Acceptance Platform will also provide a set of consolidated secure endpoints, Application Programming Interfaces (APIs), for use by GC Relying Parties (RPs) and which may be extended for use by provinces and territories, or Pan-Canadian public sector relying parties that align to the Pan-Canadian Trust Framework (PCTF). As such, the Sign In Canada service will benefit from cost-efficiencies (streamlined enrolment processes) and improved user experience for citizens and businesses alike. It will also enable a “single online window” and single sign-on to GC institutions.

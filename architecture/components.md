@@ -1,5 +1,6 @@
 # Sign In Canada
-## Application Components
+
+## Internal Application Components
 
 ### Web Application Firewall
 
@@ -57,7 +58,7 @@ Version:
 
 Website: https://www.couchbase.com/
 
-### Administration User Interface
+### Administration Web Interface
 
 Product: oxTrust
 

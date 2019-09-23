@@ -2,13 +2,21 @@
 
 ## Compute Nodes
 
-### Virtual Firewall Appliance
+### Cloud Security Appliance - Inbound
 
 Network Zone: Public Access Zone (PAZ)
 
 Hosted Componennts:
 
 * Web Application Firewall
+
+### Cloud Security Appliance - Outbound
+
+Network Zone: Public Access Zone (PAZ)
+
+Hosted Componennts:
+
+* HTTP Forward Proxy
 
 ### Application Server
 

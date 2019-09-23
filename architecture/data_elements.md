@@ -69,6 +69,14 @@ _Sensitivity_
 
 _Example_
 
+### Access Token
+
+_Description_
+
+_Sensitivity_
+
+_Example_
+
 ### Surname
 
 _Description_
@@ -102,6 +110,14 @@ _Sensitivity_
 _Example_
 
 ### Session Language
+
+_Description_
+
+_Sensitivity_
+
+_Example_
+
+### Chosen Credential or Trusted Identity Provider
 
 _Description_
 
@@ -167,7 +183,7 @@ _Sensitivity_
 
 _Example_
 
-### Access Token
+### ID Token
 
 _Description_
 
@@ -175,7 +191,15 @@ _Sensitivity_
 
 _Example_
 
-### ID Token
+### Claims Request
+
+_Description_
+
+_Sensitivity_
+
+_Example_
+
+### Claims Response
 
 _Description_
 

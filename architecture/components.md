@@ -11,7 +11,7 @@ Website: https://www.f5.com/products/security/advanced-waf/
 
 ### HTTP Reverse Proxy
 
-Product: Apache HTTPD
+Product: Apache HTTP Server
 
 Version:
 

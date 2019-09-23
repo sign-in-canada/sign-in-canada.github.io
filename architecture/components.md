@@ -10,6 +10,14 @@ Version:
 
 Website: https://www.f5.com/products/security/advanced-waf/
 
+### HTTP Forward Proxy
+
+Product: Fortigate Unified Thread Management
+
+Version:
+
+Website: https://www.fortinet.com/products/smallbusiness/utm.html
+
 ### HTTP Reverse Proxy
 
 Product: Apache HTTP Server

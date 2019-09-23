@@ -2,19 +2,19 @@
 
 ## External Systems
 
-### Credential Service Providers
+### Credential Service Provider
 
 * SAML Credential Service Providers
 * OpenID Connect Credential Service Providers
 
-### Trusted Digital Identity Providers
+### Trusted Digital Identity Provider
 
 * SAML Trusted Digital Identity Providers
 * OpenID Connect Trusted Digital Identity Providers
 
-### Relying Party Applications
+### Relying Party Application
 
 * SAML Relying Party Applications
 * OpenID Connect Relying Party Applications
 
-### User Web Browsers
+### User Web Browser

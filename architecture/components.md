@@ -12,7 +12,7 @@ Website: https://www.f5.com/products/security/advanced-waf/
 
 ### HTTP Forward Proxy
 
-Product: Fortigate Unified Thread Management
+Product: Fortigate Unified Threat Management
 
 Version:
 

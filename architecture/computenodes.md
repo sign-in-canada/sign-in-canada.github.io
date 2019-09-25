@@ -39,11 +39,11 @@ Hosted Componennts:
 
 ### Database Server
 
-Network Zone: Data Tier Internet Services Restricted Zone (ARZ)
+Network Zone: Data Tier Internet Services Restricted Zone (DRZ)
 
 ### Management Server
 
-Network Zone: Management Restricted Zone (ARZ)
+Network Zone: Management Restricted Zone (MZ)
 
 Hosted Components:
 

@@ -246,3 +246,12 @@ _Description_
 _Sensitivity_
 
 _Example_
+
+### Federation Metadata
+
+_Description_
+
+_Sensitivity_
+
+_Example_
+

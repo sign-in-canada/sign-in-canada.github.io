@@ -56,7 +56,7 @@ All HTTP traffic between the HTTP Forward Proxy and the External System is encry
 |ID Token Request|Inbound Authentication Framework|Credential Service Provider, Trusted Digital Identitty Provider|Request|
 |ID Token|Credential Service Provider, Trusted Digital Identitty Provider|Inbound Authentication Framework|Response|
 |Claims Request|Inbound Authentication Framework|Credential Service Provider, Trusted Digital Identitty Provider|Request|
-|Identity Claims|Credential Service Provider, Trusted Digital Identitty Provider|Response|
+|Identity Claims|Credential Service Provider, Trusted Digital Identitty Provider|Inbound Authentication Framework|Response|
 |Metadata Request|OpenId Provider, SAML Identity Provider|Federation Metadata Site|Request|
 |Federation Metadata|Federation Metadata Site|OpenId Provider, SAML Identity Provider|Response|
 |Metadata Request|Inbound Authentication Framework|Credential Service Provider, Trusted Digital Identitty Provider|Request|

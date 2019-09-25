@@ -18,7 +18,7 @@ All HTTP traffic between the External System and the Web Application Firewall is
 |Data Element|Source(s)|Destination(s)|HTTP Message|
 |------------|---------|--------------|------------|
 |Web Content Request|User Web Browser|OpenId Provider, SAML Identity Provider, Inbound Authentication Framework|Request|
-|Web Content|OpenId Provider, SAML IDP, Inbound Authentication Framework||User Web Browser|Response|
+|Web Content|OpenId Provider, SAML IDP, Inbound Authentication Framework|User Web Browser|Response|
 |Chosen Credential or Trusted Identity Provider|User Web Browser|Inbound Authentication Framework|Request|
 |Authentication Request|User Web Browser|OpenId Provider, SAML Identity Provider|Request|
 |Authentication Request|Inbound Authentication Framework|User Web Browser|Response|

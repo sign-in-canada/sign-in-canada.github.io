@@ -215,7 +215,7 @@ _Sensitivity_
 
 _Example_
 
-### User Data
+### Identity Claims
 
 _Description_
 
@@ -247,6 +247,14 @@ _Sensitivity_
 
 _Example_
 
+### Metadata Request
+
+_Description_
+
+_Sensitivity_
+
+_Example_
+
 ### Federation Metadata
 
 _Description_
@@ -255,3 +263,10 @@ _Sensitivity_
 
 _Example_
 
+### JSON Web Key Set
+
+_Description_
+
+_Sensitivity_
+
+_Example_

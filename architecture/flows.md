@@ -26,7 +26,7 @@ All HTTP traffic between the External System and the Web Application Firewall is
 |Authorization Code|Credential Service Provider, Trusted Digital Identitty Provider|Inbound Authentication Framework|Request|
 |SAML Assertion|SAML Identity Provider|User Web Browser|Response|
 |SAML Assertion|User Web Browser|Inbound Authentication Framework|Request|
-|Logout Request|User Browser|Inbound Authentication Framework, OpenId Provider, SAML Identity Provider|Request|
+|Logout Request|User Web Browser|Inbound Authentication Framework, OpenId Provider, SAML Identity Provider|Request|
 |Logout Response|Inbound Authentication Framework, OpenId Provider, SAML Identity Provider|User Browser|Response|
 |Logout Request|OpenId Provider, SAML Identity Provider, Inbound Authentication Framework|User Web Browser|Response|
 |Logout Response|User Web Browser|OpenId Provider, SAML Identity Provider, Inbound Authentication Framework|Request|
@@ -51,8 +51,8 @@ All HTTP traffic between the HTTP Forward Proxy and the External System is encry
 
 |Data Element|Source(s)|Destination(s)|HTTP Message|
 |------------|---------|--------------|------------|
-|Logout Request|OpenId Provider, SAML Identity Provider|Relying Party Application|HTTP Forward Proxy|Request|
-|Logout Response|Relying Party Application|OpenId Provider, SAML Identity Provider|HTTP Forward Proxy|Response|
+|Logout Request|OpenId Provider, SAML Identity Provider|Relying Party Application|Request|
+|Logout Response|Relying Party Application|OpenId Provider, SAML Identity Provider|Response|
 |ID Token Request|Inbound Authentication Framework|Credential Service Provider, Trusted Digital Identitty Provider|Request|
 |ID Token|Credential Service Provider, Trusted Digital Identitty Provider|Inbound Authentication Framework|Response|
 |Claims Request|Inbound Authentication Framework|Credential Service Provider, Trusted Digital Identitty Provider|Request|

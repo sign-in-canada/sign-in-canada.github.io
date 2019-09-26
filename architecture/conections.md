@@ -22,7 +22,7 @@
 |OpenID Provider|NoSQL Database|No|memcached|?|?|?|
 |SAML Identity Provider|NoSQL Database|No|memcached|?|?|?|
 |Distributed Session Cache|Distributed Session Cache|No|CBP|TLS|Yes|Certificate|
-|NoSQL Database|NoSQL Database|No|DCP|?|?|?|
+|NoSQL Database|NoSQL Database|No|DCP|TLS|Yes|Certificate|
 
 ### Notes
 

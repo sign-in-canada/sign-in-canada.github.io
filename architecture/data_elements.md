@@ -2,7 +2,7 @@
 
 ## Discrete Data Elements
 
-### Authorization Code
+### Authorization Code (code)
 
 _Description_
 
@@ -10,7 +10,7 @@ _Sensitivity_
 
 _Example_
 
-### IP Address
+### IP Address (IP)
 
 _Description_
 
@@ -29,7 +29,7 @@ _Example_
 
 
 
-### Pairwise Pseudonym
+### Pairwise Pseudonym (PAI)
 
 _Description_
 
@@ -37,7 +37,7 @@ _Sensitivity_
 
 _Example_
 
-### Transaction Identidier
+### Transaction Identidier (tID)
 
 _Description_
 
@@ -45,7 +45,7 @@ _Sensitivity_
 
 _Example_
 
-### Session Identifier
+### Session Identifier (sID)
 
 _Description_
 
@@ -53,7 +53,7 @@ _Sensitivity_
 
 _Example_
 
-### System Identifier
+### System Identifier (sysID)
 
 _Description_
 
@@ -61,7 +61,7 @@ _Sensitivity_
 
 _Example_
 
-### User Identifier
+### User Identifier (uID)
 
 _Description_
 
@@ -69,7 +69,7 @@ _Sensitivity_
 
 _Example_
 
-### Access Token
+### Access Token (token)
 
 _Description_
 
@@ -77,7 +77,7 @@ _Sensitivity_
 
 _Example_
 
-### Surname
+### Surname (Last name)
 
 _Description_
 
@@ -85,7 +85,7 @@ _Sensitivity_
 
 _Example_
 
-### Given Name
+### Given Name (First Name)
 
 _Description_
 
@@ -93,7 +93,7 @@ _Sensitivity_
 
 _Example_
 
-### Date of Birth
+### Date of Birth (DoB)
 
 _Description_
 
@@ -101,7 +101,7 @@ _Sensitivity_
 
 _Example_
 
-### Province of Residence
+### Province/Territory of Residence (Province)
 
 _Description_
 
@@ -109,7 +109,7 @@ _Sensitivity_
 
 _Example_
 
-### Session Language
+### Session Language (Language)
 
 _Description_
 
@@ -117,7 +117,7 @@ _Sensitivity_
 
 _Example_
 
-### Chosen Credential or Trusted Identity Provider
+### Chosen Credential or Trusted Identity Provider (Credential)
 
 _Description_
 
@@ -263,7 +263,7 @@ _Sensitivity_
 
 _Example_
 
-### JSON Web Key Set
+### JSON Web Key Set (JWKS)
 
 _Description_
 

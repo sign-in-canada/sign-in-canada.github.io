@@ -6,6 +6,8 @@
 
 Network Zone: Public Access Zone (PAZ)
 
+Product: F5 Virtual Big IP <https://www.f5.com/products/cloud-editions/big-ip-cloud-edition>
+
 Hosted Componennts:
 
 * Web Application Firewall
@@ -13,6 +15,8 @@ Hosted Componennts:
 ### Cloud Security Appliance - Outbound
 
 Network Zone: Public Access Zone (PAZ)
+
+Product: Fortinet UTM ????
 
 Hosted Componennts:
 
@@ -22,6 +26,10 @@ Hosted Componennts:
 
 Network Zone: Application Tier Internet Services Restricted Zone (ARZ)
 
+Opertating System: RedHat Enterprise Linux 7 <https://access.redhat.com/products/red-hat-enterprise-linux>
+
+Software: Gluu Server 4.0 <https://gluu.org>
+
 Hosted Componennts:
 
 * HTTP Reverse Proxy
@@ -29,17 +37,13 @@ Hosted Componennts:
 * OpenID Provider
 * SAML Identity Provider
 
-### Session Cache Server
-
-Network Zone: Application Tier Internet Services Restricted Zone (ARZ)
-
-Hosted Componennts:
-
-* Distributed Session Cache
-
 ### Database Server
 
 Network Zone: Data Tier Internet Services Restricted Zone (DRZ)
+
+Opertating System: RedHat Enterprise Linux 7 <https://access.redhat.com/products/red-hat-enterprise-linux>
+
+Software: Couchbase Server Enterprise <https://couchbase.com>
 
 ### Management Server
 

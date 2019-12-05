@@ -69,9 +69,9 @@ An internal data flow is an HTTP request/response initiated by one of the Sign i
 
 |Data Element|Source(s)|Destination(s)|
 |------------|---------|--------------|
-|Session Cache Request|Inbound Authentication Framework, OpenID Provider, SAML Identity Provider|Distributed Session Cache|
+|Session Cache Request|Inbound Authentication Framework, OpenID Provider, SAML Identity Provider|NoSQL Database|
 |Session Data|Distributed Session Cache|Inbound Authentication Framework, OpenID Provider, SAML Identity Provider|
-|Session Data|Inbound Authentication Framework, OpenID Provider, SAML Identity Provider|Distributed Session Cache|
+|Session Data|Inbound Authentication Framework, OpenID Provider, SAML Identity Provider|NoSQL Database|
 |Database Request|Inbound Authentication Framework, OpenID Provider, SAML Identity Provider|NoSQL Database|
 |User Account|NoSQL Database|Inbound Authentication Framework, OpenID Provider, SAML Identity Provider|
 |User Account|Inbound Authentication Framework, OpenID Provider|NoSQL Database|

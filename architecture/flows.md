@@ -4,16 +4,6 @@
 
 An inbound data flow is an HTTP request/response initiated by an Extenal System and service by one of the Sign in Canada application components.
 
-All inbound data flows are intermediated as follows:
-
-1) The external system sends an HTTP request to the Web Application Firewall in the PAZ
-2) The Web Application Firewall proxies the request to the HTTP Reverse Proxy in the ARZ
-3) the HTTP Reverse Proxy proxies the request to the target internal application (Inbound Authentication Framework, OpenId Provider or SAML Identity Provider)
-4) The target application returns an HTTP response to the HTTP Reverse Proxy in the ARZ
-5) The HTTP Reverse Proxy returns the response to the Web Application Firewall in the PAZ
-6) The Web Application Firewall returns the response to the External System
-
-All HTTP traffic between the External System and the Web Application Firewall is encrypted using TLS, as is the traffic between the Web Application Firewall and the HTTP Reverse Proxy.
 
 |Data Element|Source(s)|Destination(s)|HTTP Message|
 |------------|---------|--------------|------------|
@@ -39,15 +29,6 @@ All HTTP traffic between the External System and the Web Application Firewall is
 ## Outbound Data Flows
 
 An outbound data flow is an HTTP request/response initiated by one of the Sign in Canada application components and serviced by an Extenal System.
-
-All outbound data flows are intermediated as follows:
-
-1) The Sign In Canada Application (Inbound Authentication Framework, OpenId Provider or SAML Identity Provider) sends an HTTP request to the HTTP Forward Proxy in the PAZ
-2) the HTTP Forward Proxy proxies the request to the External System in the Public Zone
-3) The External System returns an HTTP response to the HTTP Forward Proxy
-4) The HTTP Forward Proxy returns the response to the Sign In Canada application component
-
-All HTTP traffic between the HTTP Forward Proxy and the External System is encrypted using TLS.
 
 |Data Element|Source(s)|Destination(s)|HTTP Message|
 |------------|---------|--------------|------------|

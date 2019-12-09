@@ -69,7 +69,7 @@ while the GCKey and Credential Broker services serve as the session management
 authority for applications connected to them.
 
 This creates a requirement for the Acceptance Platform to coordinate single
-logout with GCKey and CBS, as will as with its own RPs. The Acceptance Platform
+logout with GCKey and CBS, as well as with its own RPs. The Acceptance Platform
 accomplishes this by supporting the SAML Single Logout profile as part of its
 integration, as a relying party, with GCKey and CBS.
 
@@ -77,7 +77,7 @@ The following example scenario illustrates how single logout is achieved in the
 case where the user clicks a logout button on a site that is connected to the
 Acceptance Platform.
 
-![SP-Initiated-Logout](images/SP-initiated-logout.svg)
+![SP-Initiated-Logout](../images/SP-initiated-logout.svg)
 
 The scenario begins when a user clicks a logout button on the relying party site
 they have been using. When this happens:

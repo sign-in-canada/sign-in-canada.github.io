@@ -1,0 +1,87 @@
+# Session Management
+
+The Sign in Canada Acceptance Platform functions as a session management
+authority that centrally coordinates users’ sessions across multiple RP
+applications. There are two key features of the platform that support this:
+single sign-on, and single logout.
+
+## Single Sign-On
+
+Once a user has successfully used a given credential or trusted digital identity
+service to authenticate to one RP, the Acceptance Platform can allow them to
+silently authenticate to other RPs subject to a 20 minute timeout period. The
+Acceptance Platform accomplishes this by creating its own session with the user
+when they first sign in to one RP, and then simply not prompting them when they
+sign in to other RPs within the timeout window.
+
+Relying parties who wish to force their users to authenticate every time can
+still do so, using a parameter in their authentication requests.
+
+_Note that in order for single sign-on to work, a user must use the same
+credential or trusted digital identity to access all digital government
+services. At present, this not possible since not all Government of Canada
+services accept the same credentials. For example, accessing online tax services
+provided by CRA is currently not possible using a CKey credential, therefore
+users who chose to use a GCKey credential cannot single sign-on to CRA's "My
+Account for Individuals"._
+
+## Single Logout
+
+When a user has used Sign in Canada to obtain multiple services provided by
+multiple web sites (RP applications), the Acceptance Platform has the ability to
+centrally coordinate single logout. With single logout, the user only has to
+click one logout button on the site they are currently visiting, and the
+Acceptance platform will then log them out of all the other sites they have
+visited during their session.
+
+The propagation of logout across all of these sites uses the [OpenID Connect
+Front-Channel
+Logout](https://openid.net/specs/openid-connect-frontchannel-1_0.html)
+mechanism, the [SAML Single Logout
+Profile](https://www.oasis-open.org/committees/download.php/56782/sstc-saml-profiles-errata-2.0-wd-07.html)
+or both.
+
+_Note: Support for the [OpenID Connect Back-Channel Logout](https://openid.net/specs/openid-connect-frontchannel-1_0.html) mechanism is planned for the future._
+
+Both the OpenID Connect and SAML protocols follow the same basic sequence of events:
+
+1. As a user leverages Sign in Canada to visit multiple web sites (applications)
+   within the same session, the Acceptance Platform keeps track of which sites
+   they have visited.
+2. When the user clicks a logout button on one of the the sites they are
+   visiting, that site's web application sends a logout request to the
+   Acceptance Platform.
+3. The Acceptance Platform then sends a logout request to all of the other sites
+   the user has visited, so they can log the user out.
+
+For those sites that support the SAML profile, each site that receives a SAML
+logout request from the Acceptance Platform returns a SAML response to indicate
+whether the user was successfully logged out. For those sites that use OpenID
+Connect Front-Channel Logout, there is no similar response returned.
+
+## Transition and Coexistence
+
+There will be an extended transition period as RP applications connect to the
+Acceptance Platform and disconnect from the legacy GCKey and Credential Broker
+services one at a time. During this transition period, the Acceptance Platform
+will serve as the session management authority for applications connected to it,
+while the GCKey and Credential Broker services serve as the session management
+authority for applications connected to them.
+
+This creates a requirement for the Acceptance Platform to coordinate single
+logout with GCKey and CBS, as will as with its own RPs. The Acceptance Platform
+accomplishes this by supporting the SAML Single Logout profile as part of its
+integration, as a relying party, with GCKey and CBS.
+
+The following example scenario illustrates how single logout is achieved in the
+case where the user clicks a logout button on a site that is connected to the
+Acceptance Platform.
+
+![SP-Initiated-Logout](images/SP-initiated-logout.svg)
+
+The scenario begins when a user clicks a logout button on the relying party site
+they have been using. When this happens:
+
+1. The relying party application logs the user out locally, and then redirects the browser  to the Acceptance Platforms's end_session endpoint. 
+
+

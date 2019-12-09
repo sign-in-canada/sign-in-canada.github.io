@@ -74,7 +74,7 @@ accomplishes this by supporting the SAML Single Logout profile as part of its
 integration, as a relying party, with GCKey and CBS.
 
 The following example scenario illustrates how single logout is achieved in the
-case where the user clicks a logout button on a site that is connected to the
+case where the user clicks a logout button on a relying party site that is connected to the
 Acceptance Platform.
 
 ![SP-Initiated-Logout](../images/SP-initiated-logout.svg)
@@ -82,6 +82,41 @@ Acceptance Platform.
 The scenario begins when a user clicks a logout button on the relying party site
 they have been using. When this happens:
 
-1. The relying party application logs the user out locally, and then redirects the browser  to the Acceptance Platforms's end_session endpoint. 
+1. The relying party application logs the user out locally first, then it redirects the browser to the Acceptance Platforms's end_session endpoint.
+2. The Acceptance Platform returns an
+   [HTML](https://html.spec.whatwg.org/multipage/) logout propagation page. This
+   page contains a number of
+   [iframe](https://html.spec.whatwg.org/multipage/iframe-embed-object.html#the-iframe-element)
+   elements. The `src` (source) attribute of all but one of the `iframe`
+   elements points to the [URI](https://tools.ietf.org/html/rfc3986) of another
+   relying party site where the user has logged in during their current session.
+   In the diagram, these other sites are identified as "Other OIDC RPs". The
+   `src` attribute of the final `iframe` points to a URI endpoint of the
+   Acceptance Platform's Inbound Authentication Framework.
+3. Upon receiving the propagation page, the browser begins to load all of the of
+   the `iframe`s in parallel, by asynchronously sending an HTTP GET request to
+   the `src` URI of each `iframe`.
+4. As the other relying parties receive these requests, they log the user out
+   locally, and then return an HTTP response to the browser.
+5. When the Acceptance Platform's Inbound Authentication Framework receives its
+   request, it creates a SAML `LogoutRequest` message and then redirects the browser with that message (within the `iframe`) to the legacy
+   CSP (GCKey or CBS) that the user chose to log in with.
+6. The CSP then logs the user out of their credential. If the user has visited
+   any sites that are still connected directly to the CSP (instead of to Sign in
+   Canada) it will also propagate the logout to all of those sites.
+7. The CSP then redirects the browser (within the `iframe`) back to the
+   Acceptance Platform's Inbound Authentication Framework with a SAML
+   `LogoutResponse` message. The Inbound Authentication Framework processes this
+   message and then sends an HTTP response back to the browser.
+8. While all of the `iframe`s are propagating the logout to various sites
+   asynchronously, their progress is monitored by JavaScript code running in the
+   browser. Once all of the `iframes` have completely loaded, this JavaScript
+   code checks the success or failure status of each.
+9. If any of the `iframes` fail or time-out, the JavaScript code will redirect
+   the browser to an error page, warning the user that they may not be
+   completely signed out and recommending that they close their browser.
+10. If all of the `iframes` successfully propagate logout to their target site,
+    then the browser is redirected to the logout landing page of the site where
+    the user initially clicked "Logout".
 
 

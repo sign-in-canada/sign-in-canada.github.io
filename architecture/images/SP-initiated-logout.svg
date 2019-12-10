@@ -60,9 +60,9 @@
 				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
 			</v:userDefs>
 			<v:textBlock v:margins="rect(4,4,4,4)" v:verticalAlign="0"/>
-			<v:textRect cx="164.1" cy="576" width="328.2" height="72"/>
-			<rect x="0" y="540" width="328.2" height="72" class="st1"/>
-			<text x="91.04" y="553" class="st2" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Sign in Canada Acceptance Platform</text>		</g>
+			<v:textRect cx="110.1" cy="576" width="220.21" height="72"/>
+			<rect x="0" y="540" width="220.2" height="72" class="st1"/>
+			<text x="37.04" y="553" class="st2" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Sign in Canada Acceptance Platform</text>		</g>
 		<g id="shape8-4" v:mID="8" v:groupContext="shape" transform="translate(81,734.4) scale(1,-1)">
 			<title>Lifeline</title>
 			<path d="M0 612 L0 198" class="st3"/>
@@ -856,18 +856,18 @@
 			<text x="76.63" y="605.4" class="st15" v:langID="1033"><v:paragraph/><v:tabList/>HTTP request for  error page</text>		</g>
 		<g id="shape240-312" v:mID="240" v:groupContext="shape" transform="translate(328.8,1058.4) rotate(180)">
 			<title>Message (seq.diag).240</title>
-			<desc>Error page with link back to RP post_logout_redirect_uri</desc>
+			<desc>Error page with warning</desc>
 			<v:userDefs>
 				<v:ud v:nameU="State" v:val="VT0(1):26"/>
 				<v:ud v:nameU="LostFound" v:val="VT0(0):26"/>
 				<v:ud v:nameU="State" v:prompt="" v:val="VT0(5):26"/>
 			</v:userDefs>
 			<v:textBlock v:margins="rect(4,4,4,4)"/>
-			<v:textRect cx="130.8" cy="617.4" width="192.7" height="17.6036" transform="rotate(180)"/>
+			<v:textRect cx="130.8" cy="617.4" width="88.3" height="17.6036" transform="rotate(180)"/>
 			<path d="M0 612 L247.8 612" class="st16"/>
-			<rect v:rectContext="textBkgnd" x="-223.149" y="-622.2" width="182.885" height="9.59985" transform="rotate(180)"
+			<rect v:rectContext="textBkgnd" x="-170.948" y="-622.2" width="78.4839" height="9.59985" transform="rotate(180)"
 					class="st14"/>
-			<text x="-223.15" y="-615" transform="rotate(180)" class="st15" v:langID="1033"><v:paragraph/><v:tabList/>Error page with link back to RP post_logout_redirect_uri</text>		</g>
+			<text x="-170.95" y="-615" transform="rotate(180)" class="st15" v:langID="1033"><v:paragraph/><v:tabList/>Error page with warning</text>		</g>
 		<g id="shape241-319" v:mID="241" v:groupContext="shape" transform="translate(81,-129.6)">
 			<title>Message (seq.diag).241</title>
 			<desc>HTTP request for post-logout redirect uri</desc>

@@ -52,7 +52,7 @@ Authorization Server (AS).
 oxAuth is the core component of the Acceptance Platform, responsible for the
 user interface and business logic. As an [OpenID
 Connect](https://openid.net/connect/) Provider, it also provides the application
-programming inteface used by GC relying parties that integrate using [OpenID
+programming interface used by GC relying parties that integrate using [OpenID
 Connect](https://openid.net/connect/).
 
 Version: 4.0

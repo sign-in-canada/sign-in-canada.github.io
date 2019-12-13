@@ -2,8 +2,6 @@
 
 ## Internal Application Components
 
-![Component View](images/Component%20View.svg)
-
 ### HTTP Reverse Proxy
 
 Product: Apache HTTP Server

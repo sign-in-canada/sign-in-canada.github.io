@@ -12,7 +12,7 @@ Website: https://httpd.apache.org/
 
 Source code: https://github.com/apache/httpd
 
-### Inbound Authentication Framework
+### Acceptance Framework
 
 Product: Gluu Passport
 
@@ -20,9 +20,20 @@ Gluu Passport is a [Node.JS](https://nodejs.org/en/about/) web application based
 on the [Express](https://expressjs.com/) web application framework and the
 [Passport.JS](http://www.passportjs.org/) authentication middleware.
 
-This is the "Acceptance" component of the Acceptance Platform. It integrates
-with credential providers and trusted identity providers in order to accept
-assurances of credential and identity on behalf of GC relying parties.
+As the name implies, This is the "Acceptance" component of the Acceptance
+Platform. It integrates with credential providers and trusted identity providers
+in order to accept assurances of credential and identity on behalf of GC relying
+parties.
+
+Sign in Canada uses a version of Gluu Passport that has been customized to
+support some unique functionality that supports the coexistence with, and
+transition from, the older GCCF credential services, in particular:
+
+* It has been customized to support both the preservation and run-time migration
+  of user's existing PAIs from the CSP to the Acceptance Platform, so that the
+  transition has no impact on end users' enrolment with existing relying parties.
+* It has customized to support session coordination between the Acceptance
+  Platform and the CSPs.
 
 Version: 4.0
 

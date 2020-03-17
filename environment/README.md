@@ -19,7 +19,7 @@ Most of the below steps are written in the [attached script](install-gluu.sh) bu
 For full details on [Gluu installation instructions](https://gluu.org/docs/ce/installation-guide/install-centos/)
 
 ### Optional local couchbase install
-- If the plan is to install local couchbase DB then it has to be downloaded to below mentioned location. The couchbase folder needs to be created manually.
+- If the plan is to [install local couchbase DB](https://gluu.org/docs/cb/4.0/) then it has to be downloaded to below mentioned location. The couchbase folder needs to be created manually.
 ```
 opt/gluu-server/opt/dist/couchbase 
 ```
@@ -33,3 +33,17 @@ $ tar -C /opt/gluu-server/ -xvf SIC-AP-0.0.31.tgz
 
 ### Gluu Setup (manual steps from here onwards)
 Next step is to run setup.py file from within gluu container install the Gluu server. Remember this setup is different from installing the rpm mentioned in the [VM Setup Requirement](#VM-Setup-Requirements) section above. 
+
+``` shell
+$ /sbin/gluu-serverd enable
+$ /sbin/gluu-serverd start
+$ /sbin/gluu-serverd login
+$ cd /install/community-edition-setup/
+$ ./setup.py -sp
+```
+The [setup.py](https://gluu.org/docs/ce/3.0.2/installation-guide/install/#run-setuppy) file starts to deploy the Gluu server and user input is required for the prompts. Follow the prompts on the screen to finish the setup. 
+```note
+To install local couchbase select option 3 below
+Install (1) Gluu OpenDj (2) Couchbase (3) Hybrid [1|2|3]
+```
+This should give you the default installation of the Gluu Server and normal [user guide](https://gluu.org/docs/ce/3.0.2/admin-guide/oxtrust-ui/) instructions can be followed. Rest of the steps are required to setup SIC platform. 

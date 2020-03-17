@@ -16,8 +16,9 @@ Most of the below steps are [scripted](install-gluu.sh) as well.
 - Install the gluu server rpm specific version from [gluu repo](https://repo.gluu.org/#)
 - Once the above changes are done then the Acceptance Platform Tarball needs to be copied over to the VM and untarred. 
 
+For full details on [Gluu installation instructions](https://gluu.org/docs/ce/installation-guide/install-centos/)
+
 ### Optional local couchbase install
 - If the plan is to install local couchbase DB then it has to be downloaded to below mentioned location. The couchbase folder needs to be created manually.
-
-/opt/gluu-server/opt/dist/couchbase
+    - /opt/gluu-server/opt/dist/couchbase
 

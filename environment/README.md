@@ -23,6 +23,7 @@ For full details on [Gluu installation instructions](https://gluu.org/docs/ce/in
 ```
 opt/gluu-server/opt/dist/couchbase 
 ```
+- For [remote couchbase installation](https://gluu.org/docs/cb/4.0/#remote-installation) run ``` setup.py --remote-couchbase ```
 
 ### Copy SIC Tarball to Gluu Container Directory
 SIC Acceptance Platform currently gets packaged in a tarball through a Azure DevOps pipeline and it gets copied to Azure Blob, these are not accessible outside of corporate network. Below is test location that one of the team member is using for testing in outside of corporate location. It is important to download and untar the SIC Tarball to the gluu container directory in order to get the full functionality: 

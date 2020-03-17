@@ -60,4 +60,51 @@ To allow Gluu Server access the keyvault it is important to set the System Manag
 ![](images/keyvault.png)
 ![](images/accesspolicy.png)
 
+### Setting up certificates on Gluu Server 
 
+## Let's Encrypt Certificate with Certbot
+The Gluu Server is a web application which requires a valid certificate for communication. We can get a certificated from Let's Encrypt and use certbot to install it on the Gluu Server. Below are some instructions to do that
+```shell
+ $ /sbin/gluu-serverd login 
+ Welcome to the Gluu Server!
+ $ yum install -y certbot
+ $ vi /etc/httpd/conf.d/https_gluu.conf
+```
+Comment the redirect line to stop gluu redirection. So that certbot/letsencrypt can verify the cert location
+```
+<VirtualHost  *:80>
+        ServerName gluuserver-cc-01.canadacentral.cloudapp.azure.com
+        Redirect  / https://gluuserver-cc-01.canadacentral.cloudapp.azure.com/
+        DocumentRoot "/var/www/html/"
+</VirtualHost>
+```
+Once the above change is done then run below certbot command to install certificate. 
+```
+ $ service httpd restart
+ $ certbot certonly --webroot -w /var/www/html/ -d gluuserver-cc-01.canadacentral.cloudapp.azure.com
+```
+We have to revert the change made to ``` /etc/httpd/conf.d/https_gluu.conf ``` after the cert verification is done and re-enable Gluu redirection. 
+
+#### Next step 
+Copy the httpd certificate privatekey and fullchain.pem and import it into Keyvault. Following commands need to be exectuted:
+```
+$ cd /etc/letsencrypt/live/gluuserver-cc-01.canadacentral.cloudapp.azure.com/
+$ cat fullchain.pem privkey.pem > new.pem
+$ vi new.pem
+```
+#### Next Step
+Run below postinstall.sh script and modify the keyvault. url in the azure script to copy over all certificates to the Gluu Server. 
+```
+$ /opt/dist/signincanada/postinstall.sh
+$ vi /etc/default/azure
+--- you can check if the certificates have been copied -----
+$ find /run/keyvault/ -print
+$ ll /etc/certs/
+$ ps -ef --forest
+------ Exit out of the container ------
+exit 
+```
+Restart the Gluu container 
+```
+$ /sbin/gluu-serverd restart
+```

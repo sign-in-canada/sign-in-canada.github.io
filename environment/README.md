@@ -60,10 +60,10 @@ To allow Gluu Server access the keyvault it is important to set the System Manag
 ![](images/keyvault.png)
 ![](images/accesspolicy.png)
 
-### Setting up certificates on Gluu Server 
+## Setting up certificates on Gluu Server 
 
-## Let's Encrypt Certificate with Certbot
-The Gluu Server is a web application which requires a valid certificate for communication. We can get a certificated from Let's Encrypt and use certbot to install it on the Gluu Server. Below are some instructions to do that
+### Let's Encrypt Certificate with Certbot
+There are many ways and details can be found on the [Let's Encrypt site](https://letsencrypt.org/getting-started/). Here I am recording what I did for setting up my server. The Gluu Server is a web application which requires a valid certificate for communication. We can get a certificated from Let's Encrypt and use certbot to install it on the Gluu Server. Below are some instructions to do that
 ```shell
  $ /sbin/gluu-serverd login 
  Welcome to the Gluu Server!
@@ -85,14 +85,14 @@ Once the above change is done then run below certbot command to install certific
 ```
 We have to revert the change made to ``` /etc/httpd/conf.d/https_gluu.conf ``` after the cert verification is done and re-enable Gluu redirection. 
 
-#### Next step 
+#### Next step for setting up SIC Acceptance Platform
 Copy the httpd certificate privatekey and fullchain.pem and import it into Keyvault. Following commands need to be exectuted:
 ```
 $ cd /etc/letsencrypt/live/gluuserver-cc-01.canadacentral.cloudapp.azure.com/
 $ cat fullchain.pem privkey.pem > new.pem
 $ vi new.pem
 ```
-#### Next Step
+#### Next step for setting up SIC Acceptance Platform
 Run below postinstall.sh script and modify the keyvault. url in the azure script to copy over all certificates to the Gluu Server. 
 ```
 $ /opt/dist/signincanada/postinstall.sh
@@ -108,3 +108,6 @@ Restart the Gluu container
 ```
 $ /sbin/gluu-serverd restart
 ```
+There are few other post install steps that needs to be done which are mentioned in the ``` /opt/gluu-server/opt/dist/signincanada/postinstall.sh ```
+
+[Github location](https://github.com/sign-in-canada/Acceptance-Platform/blob/master/deployment/static/opt/dist/signincanada/postinstall.sh) of the above file. 

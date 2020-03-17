@@ -32,7 +32,7 @@ echo "enabling gluu server and logging into container"
 
 echo "downloading SIC tarball"
 wget https://sicqa.blob.core.windows.net/staging/SIC-AP-0.0.31.tgz
-tar -xvf SIC-AP-0.0.31.tgz
+tar -C /opt/gluu-server/ -xvf SIC-AP-0.0.31.tgz
 
 echo "downloading couchbase"
 mkdir /opt/gluu-server/opt/dist/couchbase

@@ -1,4 +1,4 @@
-## Setting up Environment for Signin Canada 
+## Setting up Environment for Signin Canada (SIC)
 Signin Canada Acceptance Platform application is using open source [Gluu server](https://www.gluu.org/) to provide the SAML and OIDC based authentication framework. In order to test the Acceptance Platform a Gluu server needs to be installed on RHEL7 or CentOS7 with [Couchbase Database](https://www.couchbase.com/). Ideally DB needs to be installed on a seperate VM if not then this can be installed locally but that will require a beefy VM. 
 
 ### VM Requirements
@@ -9,7 +9,8 @@ Signin Canada Acceptance Platform application is using open source [Gluu server]
 
 ### VM Setup Requirements 
 To setup the VM and make it ready for Gluu server installation following changes need to be made
-Most of the below steps are [scripted](install-gluu.sh) as well. 
+Most of the below steps are written in the [attached script](install-gluu.sh) but quiet a few variables need to be changed according to the environment. 
+
 - Hostname needs to be setup
 - /etc/hosts file must have the local IP address and hostname resolvable
 - Install the gluu server rpm specific version from [gluu repo](https://repo.gluu.org/#)
@@ -19,10 +20,16 @@ For full details on [Gluu installation instructions](https://gluu.org/docs/ce/in
 
 ### Optional local couchbase install
 - If the plan is to install local couchbase DB then it has to be downloaded to below mentioned location. The couchbase folder needs to be created manually.
-
-/opt/gluu-server/opt/dist/couchbase
+```
+opt/gluu-server/opt/dist/couchbase 
+```
 
 ### Copy SIC Tarball to Gluu Container Directory
-It is important to untar the SIC Tarball to the gluu container directory:
-    
+SIC Acceptance Platform currently gets packaged in a tarball through a Azure DevOps pipeline and it gets copied to Azure Blob, these are not accessible outside of corporate network. Below is test location that one of the team member is using for testing in outside of corporate location. It is important to download and untar the SIC Tarball to the gluu container directory in order to get the full functionality: 
+``` 
+$ wget https://***.blob.core.windows.net/staging/SIC-AP-0.0.31.tgz
+$ tar -C /opt/gluu-server/ -xvf SIC-AP-0.0.31.tgz
+```
 
+### Gluu Setup (manual steps from here onwards)
+Next step is to run setup.py file from within gluu container install the Gluu server. Remember this setup is different from installing the rpm mentioned in the [VM Setup Requirement](#VM-Setup-Requirements) section above. 

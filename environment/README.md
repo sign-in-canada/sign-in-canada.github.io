@@ -48,3 +48,16 @@ To install local couchbase select option 3 below
 Install (1) Gluu OpenDj (2) Couchbase (3) Hybrid [1|2|3]
 ```
 This should give you the default installation of the Gluu Server and normal [user guide](https://gluu.org/docs/ce/3.0.2/admin-guide/oxtrust-ui/) instructions can be followed. Rest of the steps are required to setup SIC platform. 
+
+### Certificates in Azure Keyvault and VM Access
+In order to integrate and talk to the credential broker service (CBS) and Relying Party simulator proper certificates need to be setup in the system. SIC Acceptance platform out of the box is integrated with Azure Keyvault and it is a good idea to upload the provided certificates (from the SIC team) to Azure Keyvault and allow the VM Managed Identity access to the keyvault. 
+
+Following certificates must be imported into keyvault:
+![](images/certificatesimg.png)
+
+To allow Gluu Server access the keyvault it is important to set the System Managed Identity permissions on the keyvaul. These steps can be looked up in official Azure documentation but for reference below are few images. 
+
+![](images/keyvault.png)
+![](images/accesspolicy.png)
+
+

@@ -3,6 +3,8 @@ To test Signin Canada Acceptance Platform application it is important to have or
 
 ### Test Suite 
 
+### Web based Manual Test Flows
+
 ```
 https://rp1.tbstest.catslab.ca/RPSimulator/
 ```
@@ -35,6 +37,13 @@ https://rp1.tbstest.catslab.ca/RPSimulator/response-eng.jsp?_saml_idp=aHR0cHM6Ly
 ```
 ![](images/AuthenticationResponse.png)
 
-### Manual Tests
-### Automated Tests
+### Gluu Builtin oxAuth RP 
+Once the Gluu Server is up and running and if the buit-in oxAuth RP is installed with -sp switch. The builtin oxAuth Relying party simulator is a good way to start testing the flows. 
+```
+https://gluuserver-cc-01.canadacentral.cloudapp.azure.com/oxauth-rp/home.htm
+```
+![](images/oxAuthRP.png)
 
+## Automated Tests
+### Performance Tests (JMeter)
+[Sample JMeter tests](https://github.com/GluuFederation/oxAuth/tree/master/jmeter/test) from Gluu Federation 

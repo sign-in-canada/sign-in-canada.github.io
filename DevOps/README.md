@@ -7,6 +7,9 @@ We started of by utilizing Azure DevOps Pipeline for automating SICAP packaging 
 Another major decision for choosing Azure DevOps was the SaaS offering with free non parallel jobs. This helped us fast track our CICD journey. 
 
 ## SICAP Pipelines 
+So far only Continuous Integration has been put in place. Continuous deployment is yet to be done. More work required to be done on the IMTD side. 
+
+### Build Pipeline
 SICAP is based on [Gluu Server](https://www.gluu.org/) an open source IAM solution. SICAP team has customized below libraries  of Gluu:
 
 - [Passport SAML](https://github.com/sign-in-canada/passport-saml)
@@ -28,3 +31,7 @@ All of the above is graphically explained in below image.
 ![](images/Signin-pipeline.png)
 
 The source code for the above image is [here](Signin-pipeline.xml). Upload this file to [draw.io](www.draw.io) to modify the image. 
+
+### Release pipeline
+Once the above pipelines are built they produce a package which is then picked up by the Release pipeline to be published to an Azure blob. The Release pipeline is being run by TBS Hosted Agent which has access to the Azure blob. 
+

@@ -28,7 +28,7 @@ All of the above libraries are then packaged into
 
 All of the above is graphically explained in below image. 
 
-![](images/Signin-pipeline.png)
+![](images/Signin-pipeline_.png)
 
 The source code for the above image is [here](Signin-pipeline.xml). Upload this file to [draw.io](www.draw.io) to modify the image. 
 

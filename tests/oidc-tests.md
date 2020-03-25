@@ -1,4 +1,15 @@
-## OpenID tests
+## OpenID Provider Conformance tests
+[OpenID Connect Provider Certification](https://op.certification.openid.net:60000/) provides a self service portal where you can configure your environment to run certain conformance profile tests. Some of the conformance profiles are:
+
+- Basic OP
+- Implicit OP
+- Hybrid OP
+- Config OP
+- Dynamic OP
+
+More details can be found about the above profile testing on official [OpenID Certification Testing site](https://openid.net/certification/testing/)
+
+Below are number of conformance tests that were configured with the one of the non corporate (public cloud provider) test environment. [For now this can be seen here as well.](https://op.certification.openid.net:62183/)
 
 |                                | Name                               | Description                                                                                                        |  |
 |--------------------------------|------------------------------------|--------------------------------------------------------------------------------------------------------------------|--|

@@ -1,6 +1,5 @@
 ## HTTP Flows (Request, Response Headers and Form Data)
-
-Relying Party simulator sends a SAML request to shiboleth which then converts the request into OIDC for oxauth to display chooser page UI and sends the request to passport which generates a SAML request for authentication to the CPSIM (Credential Provider Simulator) /CBS (Credential Broker Service). 
+Below are network captures from one of the test enviroment which displays detail HTTP flows. Signin Canada Acceptance Platform (SICAP) flow starts from a Relying party/simulator which simulator sends a SAML request to shiboleth which then converts the request into OIDC for oxauth to display chooser page UI and sends the request to passport which generates a SAML request for authentication to the CPSIM (Credential Provider Simulator) /CBS (Credential Broker Service). 
 
 ### Relying Party Simulator landing/home page
 ```

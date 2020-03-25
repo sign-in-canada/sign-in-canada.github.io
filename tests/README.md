@@ -44,6 +44,12 @@ https://gluuserver-cc-01.canadacentral.cloudapp.azure.com/oxauth-rp/home.htm
 ```
 ![](images/oxAuthRP.png)
 
+## MFA Functional Test Flows 
+Work in progress
+
+## SAML Functiona Tests
+Work in progress
+
 ## Integration and Regression Testing
 Work in progress
 

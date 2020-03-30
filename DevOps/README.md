@@ -26,6 +26,8 @@ All of the above libraries are then packaged into
 
 - [Acceptance Platform](https://github.com/sign-in-canada/Acceptance-Platform)
 
+![](images/builds.png)
+
 All of the above is graphically explained in below image. 
 
 ![](images/Signin-pipeline_.png)
@@ -34,4 +36,6 @@ The source code for the above image is [here](Signin-pipeline.xml). Upload this 
 
 ### Release pipeline
 Once the above pipelines are built they produce a package which is then picked up by the Release pipeline to be published to an Azure blob. The Release pipeline is being run by TBS Hosted Agent which has access to the Azure blob. 
+
+![](images/release-pipeline.png)
 

@@ -1,6 +1,8 @@
 ## Testing Signin Canada Acceptance Platform (SICAP)
 To test Signin Canada Acceptance Platform (SICAP) application it is important to have or setup the [environment](../environment/README.md). Usually these envrionments are already available and provided but if in an unforseeable circumstances you have to create one, instructions are available [here](../environment/README.md). 
 
+For graphical overview of internal processes and services of Gluu [please see.](gluuOverview.md)
+
 ### Test Suite 
 
 ### Web based Manual Functional Test Flows

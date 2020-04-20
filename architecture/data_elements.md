@@ -37,7 +37,7 @@ _Sensitivity_
 
 _Example_
 
-### Transaction Identidier (tID)
+### Transaction Identifier (tID)
 
 _Description_
 
@@ -77,7 +77,7 @@ _Sensitivity_
 
 _Example_
 
-### Surname (Last name)
+### Surname (Last Name)
 
 _Description_
 

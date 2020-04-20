@@ -24,7 +24,7 @@ An inbound data flow is an HTTP request/response initiated by an External System
 |ID Token|OpenId Provider|Relying Party Application|Response|
 |Access Token|OpenId Provider|Relying Party Application|Response|
 |Claims Request|Relying Party Application|OpenId Provider|Request|
-|Claims|OpenId Provider|Relying Party Application|Response|
+|Identity Claims|OpenId Provider|Relying Party Application|Response|
 |Metadata Request|Relying Party Application|OpenId Provider|Request|
 |Federation Metadata|OpenId Provider|Relying Party Application|Response|
 |JSON Web Key Set|OpenId Provider|Relying Party Application|Response|

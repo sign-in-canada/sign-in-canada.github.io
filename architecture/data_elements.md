@@ -199,7 +199,7 @@ _Sensitivity_
 
 _Example_
 
-### Claims Response
+### Claims
 
 _Description_
 

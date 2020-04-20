@@ -1,7 +1,11 @@
-## Testing Signin Canada (SIC)
-To test Signin Canada Acceptance Platform application it is important to have or setup the [environment](../environment/README.md). Usually these envrionments are already available and provided but if in an unforseeable circumstances you have to create one, instructions are available [here](../environment/README.md). 
+## Testing Signin Canada Acceptance Platform (SICAP)
+To test Signin Canada Acceptance Platform (SICAP) application it is important to have or setup the [environment](../environment/README.md). Usually these envrionments are already available and provided but if in an unforseeable circumstances you have to create one, instructions are available [here](../environment/README.md). 
+
+For graphical overview of internal processes and services of Gluu [please see.](gluuOverview.md)
 
 ### Test Suite 
+
+### Web based Manual Functional Test Flows
 
 ```
 https://rp1.tbstest.catslab.ca/RPSimulator/
@@ -35,6 +39,24 @@ https://rp1.tbstest.catslab.ca/RPSimulator/response-eng.jsp?_saml_idp=aHR0cHM6Ly
 ```
 ![](images/AuthenticationResponse.png)
 
-### Manual Tests
-### Automated Tests
+### Gluu Builtin oxAuth RP for Manual Functional Testing
+Once the Gluu Server is up and running and if the buit-in oxAuth RP is installed with -sp switch. The builtin oxAuth Relying party simulator is a good way to start testing the flows. 
+```
+https://gluuserver-cc-01.canadacentral.cloudapp.azure.com/oxauth-rp/home.htm
+```
+![](images/oxAuthRP.png)
 
+## MFA Functional Test Flows 
+Work in progress
+
+## SAML Functiona Tests
+Work in progress
+
+## Integration and Regression Testing
+Work in progress
+
+## Automated Tests
+SICAP team is in the process of building automated tests. In the meanwhile Gluu has created below performance tests using JMeter. 
+
+### Performance Tests (JMeter)
+[Sample JMeter tests](https://github.com/GluuFederation/oxAuth/tree/master/jmeter/test) from Gluu Federation 

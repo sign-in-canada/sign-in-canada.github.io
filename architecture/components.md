@@ -35,11 +35,11 @@ transition from, the older GCCF credential services, in particular:
 * It has customized to support session coordination between the Acceptance
   Platform and the CSPs.
 
-Version: 4.0
+Version: 4.1
 
-Website: https://www.passportjs.org/
+Website: https://www.gluu.org/
 
-Source code: https://github.com/GluuFederation/gluu-passport
+Source code: https://github.com/sign-in-canada/gluu-passport/
 
 ### OpenID Provider
 
@@ -55,11 +55,11 @@ Connect](https://openid.net/connect/) Provider, it also provides the application
 programming interface used by GC relying parties that integrate using [OpenID
 Connect](https://openid.net/connect/).
 
-Version: 4.0
+Version: 4.1
 
 Website: https://www.gluu.org/
 
-Source code: https://github.com/GluuFederation/oxAuth
+Source code: https://github.com/GluuFederation/oxAuth/
 
 ### SAML Identity Provider
 
@@ -73,7 +73,7 @@ Version: 3.4.4
 
 Website: https://www.shibboleth.net/products/identity-provider/
 
-Source code: https://wiki.shibboleth.net/confluence/display/DEV/Source+Code+Access
+Source code: https://wiki.shibboleth.net/confluence/display/DEV/Source+Code+Access/
 
 ### NoSQL Database
 
@@ -84,18 +84,10 @@ document-oriented database software package that is optimized for interactive
 applications.
 
 
-Version: 6.0.3
+Version: 6.5
 
 Website: https://www.couchbase.com/
 
-### Memcached Proxy
-
-Product: Moxi
-
-
-Version: 5.0
-
-Website/ Source code: https://github.com/couchbase/moxi
 
 ### Administration Web Interface
 
@@ -109,8 +101,8 @@ handles other server instance specific configurations, and provides a mechanism
 for IT administrators to support people at the organization who are having
 trouble accessing a website or network resource.
 
-Version: 4.0
+Version: 4.1
 
 Website: https://www.gluu.org/
 
-Source code: https://github.com/GluuFederation/oxTrust
+Source code: https://github.com/GluuFederation/oxTrust/

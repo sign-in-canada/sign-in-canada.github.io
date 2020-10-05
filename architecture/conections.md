@@ -15,7 +15,6 @@ loopback network interface).
 |------|------|----------|---------|----------|---------------------|---------------------|
 |User Web Browser|HTTP Reverse Proxy|External|HTTP|TLS|Yes|No|
 |Relying Party Application|HTTP Reverse Proxy|External|HTTP|TLS|Yes|Yes<sup>1</sup>|
-|Credential Service Provider|HTTP Reverse Proxy|External|HTTP|TLS|Yes|No|
 |HTTP Reverse Proxy|Inbound Authentication Framework|Local|HTTP|No|No|No|
 |HTTP Reverse Proxy|OpenID Provider|Local|HTTP|No|No|No|
 |HTTP Reverse Proxy|SAML Identity Provider|Local|HTTP|No|No|No|

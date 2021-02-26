@@ -23,9 +23,9 @@ loopback network interface).
 |OpenID Provider|NoSQL Database|Internal|HTTP, memcached|TLS|Yes<sup>3</sup>|Yes|
 |SAML Identity Provider|NoSQL Database|Internal|HTTP|TLS|Yes<sup>3</sup>|Yes|
 |Inbound Authentication Framework|Azure Monitor (Application Insights)|External|HTTP|TLS|Yes|Yes<sup>4</sup>|
-|OpenID Provider|Azure Monitor (Application Insights)|External|HTTP|TLS|Yes|Yes|
-|SAML Identity Provider|Azure Monitor (Application Insights)|External|HTTP|TLS|Yes|Yes|
-|Administration Web Interface|Azure Monitor (Application Insights)|External|HTTP|TLS|Yes|Yes|
+|OpenID Provider|Azure Monitor (Application Insights)|External|HTTP|TLS|Yes|Yes<sup>4</sup>|
+|SAML Identity Provider|Azure Monitor (Application Insights)|External|HTTP|TLS|Yes|Yes<sup>4</sup>|
+|Administration Web Interface|Azure Monitor (Application Insights)|External|HTTP|TLS|Yes|Yes<sup>4</sup>|
 |SAML Identity Provider|Azure Storage|External|HTTP|TLS|Yes|No|
 |NoSQL Database|Azure Storage|External|HTTP|TLS|Yes|Yes<sup>5</sup>|
 |OpenID Provider|Azure Key Vault|External|HTTP|TLS|Yes|Yes<sup>5</sup>|

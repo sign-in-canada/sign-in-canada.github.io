@@ -22,6 +22,15 @@ loopback network interface).
 |Inbound Authentication Framework|Credential Service Provider|External|HTTP|TLS|Yes|Yes<sup>2</sup>|
 |OpenID Provider|NoSQL Database|Internal|HTTP, memcached|TLS|Yes<sup>3</sup>|Yes|
 |SAML Identity Provider|NoSQL Database|Internal|HTTP|TLS|Yes<sup>3</sup>|Yes|
+|Inbound Authentication Framework|Azure Monitor (Application Insights)|External|HTTP|TLS|Yes|Yes<sup>4</sup>|
+|OpenID Provider|Azure Monitor (Application Insights)|External|HTTP|TLS|Yes|Yes|
+|SAML Identity Provider|Azure Monitor (Application Insights)|External|HTTP|TLS|Yes|Yes|
+|Administration Web Interface|Azure Monitor (Application Insights)|External|HTTP|TLS|Yes|Yes|
+|SAML Identity Provider|Azure Storage|External|HTTP|TLS|Yes|No|
+|NoSQL Database|Azure Storage|External|HTTP|TLS|Yes|Yes<sup>5</sup>|
+|OpenID Provider|Azure Key Vault|External|HTTP|TLS|Yes|Yes<sup>5</sup>|
+|Inbound Authentication Framework|Azure Key Vault|External|HTTP|TLS|Yes|Yes<sup>5</sup>|
+|SAML Identity Provider|Azure Key Vault|External|HTTP|TLS|Yes|Yes<sup>5</sup>|
 
 ### Notes
 
@@ -39,6 +48,10 @@ loopback network interface).
    authenticated as supported by the provider.
 3. Clients authenticate the database server using a self-signed certificate
    issued by the database and trusted by the client.
+4. Clients authenticate to Azure Monitor using an Application Insights instrumentation key which is managed in Azure Key Vault.
+5. Clients authenticate to Azure Key Vault and Azure Storage using an Azure
+   Active Directory [managed
+   identity](https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview).
 
 
 ### Protocol References

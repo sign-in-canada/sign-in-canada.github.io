@@ -2,7 +2,7 @@
 
 ## Inbound Data Flows
 
-An inbound data flow is an HTTP request/response initiated by an External System and service by one of the Sign in Canada application components.
+An inbound data flow is an HTTP request/response initiated by an External System and service by one of the Acceptance Platform application components.
 
 
 |Data Element|Source(s)|Destination(s)|HTTP Message|
@@ -41,11 +41,15 @@ An outbound data flow is an HTTP request/response initiated by one of the Sign i
 |ID Token|Credential Service Provider, Trusted Digital Identity Provider|Acceptance Framework|Response|
 |Claims Request|Acceptance Framework|Credential Service Provider, Trusted Digital Identity Provider|Request|
 |Identity Claims|Credential Service Provider, Trusted Digital Identity Provider|Acceptance Framework|Response|
-|Metadata Request|OpenId Provider, SAML Identity Provider|Federation Metadata Site|Request|
-|Federation Metadata|Federation Metadata Site|OpenId Provider, SAML Identity Provider|Response|
+|Metadata Request|OpenId Provider, SAML Identity Provider|Azure Storage|Request|
+|Federation Metadata|Azure Storage|SAML Identity Provider|Response|
 |Metadata Request|Acceptance Framework|Credential Service Provider, Trusted Digital Identity Provider|Request|
 |Federation Metadata|Credential Service Provider, Trusted Digital Identity Provider|Acceptance Framework|Response|
 |JSON Web Key Set|Credential Service Provider, Trusted Digital Identity Provider|Acceptance Framework|Response|
+|Application Telemetry and Logs|OpenId Provider, SAML Identity Provider, Acceptance Framework, Administration Web Interface|Azure Monitor (Application Insights)|Request|
+|Data Backups|NoSQL Database|Azure Storage|Request|
+|Application Secret Request|OpenId Provider, SAML Identity Provider, Acceptance Framework|Azure Key Vault|Request|
+|Application Secrets|Azure Key Vault|OpenId Provider, SAML Identity Provider, Acceptance Framework|Response|
 
 ## Internal Data Flows
 

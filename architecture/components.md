@@ -55,7 +55,7 @@ Connect](https://openid.net/connect/) Provider, it also provides the application
 programming interface used by GC relying parties that integrate using [OpenID
 Connect](https://openid.net/connect/).
 
-Version: 4.1
+Version: 4.2.3
 
 Website: https://www.gluu.org/
 
@@ -69,7 +69,7 @@ Shibboleth is a [SAML](https://wiki.oasis-open.org/security/FrontPage) Identity
 Provider (IDP) that provides the application programming inteface used by GC
 relying parties that integrate using [SAML](https://wiki.oasis-open.org/security/FrontPage).
 
-Version: 3.4.4
+Version: 4.0.1
 
 Website: https://www.shibboleth.net/products/identity-provider/
 
@@ -84,7 +84,7 @@ document-oriented database software package that is optimized for interactive
 applications.
 
 
-Version: 6.5
+Version: 6.6.1
 
 Website: https://www.couchbase.com/
 
@@ -101,7 +101,7 @@ handles other server instance specific configurations, and provides a mechanism
 for IT administrators to support people at the organization who are having
 trouble accessing a website or network resource.
 
-Version: 4.1
+Version: 4.2.3
 
 Website: https://www.gluu.org/
 

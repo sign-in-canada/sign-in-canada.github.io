@@ -9,8 +9,7 @@ One of the key prerequisites for decommissioning or replacing these old systems
 is to move the pairwise identifier mappings currently held by these older
 services to the Acceptance Platform, so that users' enrolments with relying
 parties are not impacted when relying parties move to the Sign In Canada
-platform. This also reduces the need to "bulk transfer" all of this data from
-the older systems prior to their decommissioning/replacement.
+platform. 
 
 The Sign In Canada Acceptance Platform implements a feature that is able to
 automatically copy a user's pairwise identified mappings from a legacy
@@ -19,7 +18,7 @@ These are then stored by the Acceptance Platform for future use, so that the
 mapping stored by the credential service is no longer required. This reduces the
 risk and effort required to move this data. Over time the mapping data of active
 users is gradually "collected" by the Acceptance Platform, reducing the need to
-copy the data manually.
+regularly copy the data manually via some kind of "bulk transfer".
 
 ## How it works
 

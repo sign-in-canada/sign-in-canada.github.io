@@ -25,23 +25,23 @@ copy the data manually.
 
 The Acceptance Platform accomplishes the automatic collection of pairwise
 identifier mappings as part of the normal user login process, by sending a second
-SAML authentication requests to the legacy credential service providers when
+SAML authentication request to the legacy credential service providers when
 required.
 
 1. The process begins when a relying party sends an authentication request to
-   the Acceptance Platform, using either OpenID connect or SAML.
+   the Acceptance Platform, using either OpenID Connect or SAML.
 2. The Acceptance Platform then sends an authentication request to the CSP on
    its own behalf. Requesting the pairwise identifier that the CSP has created
    for Sign In Canada.
-3. Upon receiving the SAML Assertion from the CSP, the Acceptance platform looks
-   the user up in its own repository.
-4. The Acceptance Platform then check to see if it already has a pairwise
+3. Upon receiving the SAML Assertion from the CSP, the Acceptance Platform looks
+   the user up in its own user profile repository.
+4. The Acceptance Platform then checks to see if it already has a pairwise
    identifier mapping for the authenticated user with the requesting relying
    party. If so, then collection is not required, the login flow completes
-   normally and the Acceptance platform returns the appropriate pairwise
+   normally, and the Acceptance platform returns the appropriate pairwise
    identifier to the relying party (RP).
 5. If however, the Acceptance Platform does not have a pairwise identifier
-   mapping for the authenticated user with the requesting relying party it then
+   mapping for the authenticated user with the requesting relying party, then it
    sends a second authentication request to the CSP on the relying party's
    behalf.
 6. If the CSP has an existing pairwise identifier for the user with the
@@ -59,7 +59,7 @@ required.
 When sending a second authentication request to the CSP on behalf or the relying
 party, the Acceptance Platform makes use of the `<NameIDPolicy>` element of the
 SAML `<AuthnRequest>` message. Specifically, it uses the following two
-attributes of the `<NameIDPolicy>` element.
+attributes of the `<NameIDPolicy>` element:
 
 * The value of the `SPNameQualifier` attribute is populated with the old SAML
   Entity Id of the requesting relying party, to indicate that the Acceptance
@@ -139,7 +139,7 @@ that the user will not have to authenticate more than once, if at all:
   re-enter their credentials at all. The relying party can override this
   behaviour by specifying `prompt="login"` (for OpenID Connect) or
   `forceAuthn="true"` (in SAML) in their authentication request to Sign In
-  Casnada, in which case the Acceptance Platform will specify
+  Canada, in which case the Acceptance Platform will specify
   `forceAuthn="true"` on it's first request to the CSP, but not the second.
 
 ### What if the user at the keyboard changes? Is there a risk that the Acceptance Platform could collect the wrong identifier belonging to the wrong person?
@@ -154,14 +154,14 @@ Consider two users, Alice and Bob, who both have access to the same shared compu
   the computer without logging off.
 * Bob then sits down at the same computer and attempts to log in to a Sign In
   Canada relying party, just a few seconds before Alice's 20 minute single-sign
-  on window expired.
+  on window expires.
 * The Acceptance platform sends the first authentication request to GCKey, and
   receives Alice's pairwise identifier in return.
 * Alice's SSO window then expires in the fraction of a second before the
   Acceptance Platform sends the second authentication request. GCKey prompts Bob
   to enter his GCKey credentials and then returns Bob's pairwise identifier to
   the Acceptance Platform.
-* The Acceptance platform then associates Bob's GCKey identifier, with Alice's
+* The Acceptance platform then associates Bob's GCKey identifier with Alice's
   user profile.
 
 In order to safeguard against this, the Acceptance Platform checks the

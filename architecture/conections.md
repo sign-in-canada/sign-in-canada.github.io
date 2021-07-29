@@ -18,18 +18,18 @@ loopback network interface).
 |HTTP Reverse Proxy|Inbound Authentication Framework|Local|HTTP|No|No|No|
 |HTTP Reverse Proxy|OpenID Provider|Local|HTTP|No|No|No|
 |HTTP Reverse Proxy|SAML Identity Provider|Local|HTTP|No|No|No|
-|Inbound Authentication Framework|Trusted Identity Provider|External|HTTP|TLS|Yes|Yes<sup>2</sup>|
-|Inbound Authentication Framework|Credential Service Provider|External|HTTP|TLS|Yes|Yes<sup>2</sup>|
+|Acceptance Framework|Trusted Identity Provider|External|HTTP|TLS|Yes|Yes<sup>2</sup>|
+|Acceptance Framework|Credential Service Provider|External|HTTP|TLS|Yes|Yes<sup>2</sup>|
 |OpenID Provider|NoSQL Database|Internal|HTTP, memcached|TLS|Yes<sup>3</sup>|Yes|
 |SAML Identity Provider|NoSQL Database|Internal|HTTP|TLS|Yes<sup>3</sup>|Yes|
-|Inbound Authentication Framework|Azure Monitor (Application Insights)|External|HTTP|TLS|Yes|Yes<sup>4</sup>|
+|Acceptance Framework|Azure Monitor (Application Insights)|External|HTTP|TLS|Yes|Yes<sup>4</sup>|
 |OpenID Provider|Azure Monitor (Application Insights)|External|HTTP|TLS|Yes|Yes<sup>4</sup>|
 |SAML Identity Provider|Azure Monitor (Application Insights)|External|HTTP|TLS|Yes|Yes<sup>4</sup>|
 |Administration Web Interface|Azure Monitor (Application Insights)|External|HTTP|TLS|Yes|Yes<sup>4</sup>|
 |SAML Identity Provider|Azure Storage|External|HTTP|TLS|Yes|No|
 |NoSQL Database|Azure Storage|External|HTTP|TLS|Yes|Yes<sup>5</sup>|
 |OpenID Provider|Azure Key Vault|External|HTTP|TLS|Yes|Yes<sup>5</sup>|
-|Inbound Authentication Framework|Azure Key Vault|External|HTTP|TLS|Yes|Yes<sup>5</sup>|
+|Acceptance Framework|Azure Key Vault|External|HTTP|TLS|Yes|Yes<sup>5</sup>|
 |SAML Identity Provider|Azure Key Vault|External|HTTP|TLS|Yes|Yes<sup>5</sup>|
 
 ### Notes
